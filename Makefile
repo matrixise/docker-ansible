@@ -1,5 +1,6 @@
+DOCKER_IMAGE=docker-ansible
 build:
-	docker build -t ansible-in-containers:latest .
+	docker build -t $(DOCKER_IMAGE):latest .
 
 run:
-	docker run -it --rm --volume /Users/stephane/src/github.com/mgxio/docker-ansible:/ansible -w /ansible ansible-in-containers:latest
+	docker run -it --rm --volume $(PWD):/ansible -w /ansible $(DOCKER_IMAGE):latest
