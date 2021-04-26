@@ -1,4 +1,4 @@
-DOCKER_IMAGE=docker-ansible
+DOCKER_IMAGE=matrixise/docker-ansible
 build:
 	docker build -t $(DOCKER_IMAGE):latest .
 
