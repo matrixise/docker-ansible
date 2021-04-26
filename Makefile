@@ -4,3 +4,6 @@ build:
 
 run:
 	docker run -it --rm --volume $(PWD):/ansible -w /ansible $(DOCKER_IMAGE):latest
+
+publish:
+	docker push $(DOCKER_IMAGE):latest
